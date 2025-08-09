@@ -1,0 +1,75 @@
+import subprocess#using this module for the interacting with the external software and paths
+import time#using this module for time relavant work
+import webbrowser#using this module for the interacting with webbrowsers and directly hit the webpage site which we wanted too
+def directory():#directory func use to interact with the directory of path
+    command = input("Enter into your directory (c / d / e): ").lower()
+    if command == "c":
+        subprocess.Popen(["explorer", "C:\\"])
+    elif command == "d":
+        subprocess.Popen(["explorer", "D:\\"])
+    elif command == "e":
+        subprocess.Popen["explorer", "E:\\"]
+def open_profile():
+    command = input("your profile aabith (linkedin/naukri/both): ").lower()#func that interact with my linkedin and naukri profile of my webpage
+    if command == "linkedin":
+        webbrowser.open("https://www.linkedin.com/feed/")#link for linkedin webpage
+    elif command == "naukri":
+        webbrowser.open("https://www.naukri.com/mnjuser/homepage")#link for naukri webpage
+    elif command == "both":#command to open both the pages
+        webbrowser.open("https://www.linkedin.com/feed/")
+        webbrowser.open("https://www.naukri.com/mnjuser/homepage")
+def chatbot():
+    print("I am samantha your personal assitant")
+    while True:#for the continuous execution
+        command = input("you:").lower()
+        if command in ["boring","I am getting bored",]:#command is boring it will ask you for entertain
+            print("spotify","youtube","instagram",)
+        if command in["exit","i want to exit"," yes i want to exit"]:
+            break #the execution of continous loop breaks
+        if command in ["open directory","c","d","e","check directory","look at directory","no look into directory"]:#commands for looking into the directory
+            directory()#call the function for opening the directory
+        elif command in["exit","i want to exit"," yes i want to exit"]:
+            break #the execution of continous loop breaks
+        elif command =="hello":
+            print("Hi aabith how are you💖")
+        elif command=="hi":
+            print("Hello aabith💖")
+        elif command in ["fine","good","no i dont want to exit","i am fine","no i dont want too"]:
+            print("ok what is your plan today")
+        elif command =="how are you":
+            print("I am fine what about you")
+        elif command in ["i dont known ","suggest me something","no plan","nothing"]:
+            print("do you want learn something from chatgpt or youtube","or looking into your linked or naukri profile",",what's your mood today aabith ")
+        elif command in ["want to get motivated","happy","no i dont want to exit","no"]:
+            print("want to listen some music",",watch some movies on youtube")
+        elif command == "yes i want too":
+            print("youtube or spotify")
+        elif command =="sad":
+            print("ok lets break your mood youtube or insta reels")
+        elif command in["sleepy","dull"]:
+            print("do you want to exit")
+        elif command in["exit","i want to exit"," yes i want to exit"]:
+            break #the execution of continous loop breaks
+        elif command in ["spotify","yeah i want listen music","yeah i want listen songs",""]:#this commands executed 
+            webbrowser.open("https://open.spotify.com/")#call the spotify  using the link
+        elif command in ["youtube","go with youtube","yt"]:#command for calling the youtube
+            webbrowser.open("https://www.youtube.com/")#call the youtube using the link
+        elif command in["instagram","insta reels","instagram reels"]:#command for calling the instagram
+            webbrowser.open("https://www.instagram.com/")#call the instagram using the link
+        elif command == "chagpt":#command for calling the chatgpt
+            webbrowser.open("https://chatgpt.com/c/6879e234-20c0-8000-9c36-fb5251072480")#call the chatgpt using the link
+        elif command =="sad":
+            print("no worries,want to look at your notes and roadmap of your goal or want to distract the sadness")
+        elif command =="distract the sadness":
+            print("better you can go with music or funny content")
+        elif command == "funny content":
+            print("instagram reels or youtube content")
+        elif command =="notes":
+            print("look at your directory d")
+        elif command in["looking for job","looking for internship","check my profile","look into profile","profiles","profile"]:
+            open_profile()
+        elif command in["exit","i want to exit"," yes i want to exit","ok bye"]:
+            break #the execution of continous loop breaks
+        else:
+            print("command doesnt exits")
+chatbot()
